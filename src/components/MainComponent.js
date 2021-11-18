@@ -7,9 +7,9 @@ import Home from './HomeComponent';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { CAMPSITES } from '../shared/campsites';
-import { COMMENTS } from '../shared/campsites';
-import { PARTNERS } from '../shared/campsites';
-import { PROMOTIONS } from '../shared/campsites';
+import { COMMENTS } from '../shared/comments';
+import { PARTNERS } from '../shared/partners';
+import { PROMOTIONS } from '../shared/promotions';
 
 
 class Main extends Component {
@@ -31,6 +31,7 @@ class Main extends Component {
                     campsite={this.state.campsites.filter(campsite => campsite.featured)[0]}
                     promotion={this.state.promotions.filter(promotion => promotion.featured)[0]}
                     partner={this.state.partners.filter(partner => partner.featured)[0]}
+                    
                 />
             );
         };
